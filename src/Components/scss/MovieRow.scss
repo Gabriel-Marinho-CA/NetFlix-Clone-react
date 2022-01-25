@@ -1,0 +1,72 @@
+.movieRow {
+    margin-bottom: 30px;
+
+    h2{
+        margin-left: 30px;
+    }
+
+    &:hover {
+        .movieRow-left,.movieRow-right{
+            opacity: 1;
+        }
+    }
+
+    .movieRow--listarea {
+        overflow-x: hidden;
+        padding-left: 30px;
+        
+        .movieRow--list{
+
+            transition: all 0.5s ease;
+
+            .movieRow--item {
+                display: inline-block;
+                max-width: 200px;
+                cursor: pointer;
+                img {
+                    height:auto;
+                    width: 100%;
+                    transform: scale(.9);
+                    transition: all .3s ease;
+                    &:hover {
+                        transform: scale(1)
+                    }
+                }
+            }
+        }
+
+    }
+
+    .movieRow-left,.movieRow-right {
+        position:absolute;
+        width: 40px;
+        height:300px;
+        background-color: rgba(0, 0,0,0.6);
+        z-index: 99;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: all .3s ease;
+
+    }
+    .movieRow-left{
+        left: 10px;
+    }
+    .movieRow-right{
+        right: 10px;
+    } 
+}
+
+@media (max-width:547px), (max-width:1000px) and (orientation: landscape), (max-width:1000px) and (min-height:1000px) {
+    .movieRow-left,.movieRow-right {
+        opacity: 1 !important;
+    }
+    .movieRow-left{
+        left: 0 !important;
+    }
+    .movieRow-right{
+        right: 0 !important;
+    }
+}

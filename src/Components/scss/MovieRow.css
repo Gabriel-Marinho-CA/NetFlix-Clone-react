@@ -1,0 +1,83 @@
+.movieRow {
+  margin-bottom: 30px;
+}
+
+.movieRow h2 {
+  margin-left: 30px;
+}
+
+.movieRow:hover .movieRow-left, .movieRow:hover .movieRow-right {
+  opacity: 1;
+}
+
+.movieRow .movieRow--listarea {
+  overflow-x: hidden;
+  padding-left: 30px;
+}
+
+.movieRow .movieRow--listarea .movieRow--list {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.movieRow .movieRow--listarea .movieRow--list .movieRow--item {
+  display: inline-block;
+  max-width: 200px;
+  cursor: pointer;
+}
+
+.movieRow .movieRow--listarea .movieRow--list .movieRow--item img {
+  height: auto;
+  width: 100%;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.movieRow .movieRow--listarea .movieRow--list .movieRow--item img:hover {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.movieRow .movieRow-left, .movieRow .movieRow-right {
+  position: absolute;
+  width: 40px;
+  height: 300px;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 99;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 0;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.movieRow .movieRow-left {
+  left: 10px;
+}
+
+.movieRow .movieRow-right {
+  right: 10px;
+}
+
+@media (max-width: 547px), (max-width: 1000px) and (orientation: landscape), (max-width: 1000px) and (min-height: 1000px) {
+  .movieRow-left, .movieRow-right {
+    opacity: 1 !important;
+  }
+  .movieRow-left {
+    left: 0 !important;
+  }
+  .movieRow-right {
+    right: 0 !important;
+  }
+}
+/*# sourceMappingURL=MovieRow.css.map */
